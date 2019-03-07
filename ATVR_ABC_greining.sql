@@ -6,6 +6,8 @@ GROUP BY h.vorunumer, h.yfirflokkur, v.nafn, v.millilitrar, v.eining
     HAVING max(h.solumagn) > 0
 ORDER BY sum(h.solumagn) DESC;
 
+SELECT * FROM yfirflokkur;
+
 SELECT sum(solumagn)
 FROM hreyfingar
 WHERE yfirflokkur in ('60', '61', '62');
