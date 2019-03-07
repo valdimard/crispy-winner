@@ -10,6 +10,9 @@ SELECT sum(solumagn)
 FROM hreyfingar
 WHERE yfirflokkur in ('60', '61', '62');
 
+SELECT * FROM yfirflokkur;
+
+SELECT * FROM alagning;
 
 
 
