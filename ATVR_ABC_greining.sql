@@ -12,11 +12,14 @@ WHERE yfirflokkur in ('60', '61', '62');
 
 SELECT * FROM yfirflokkur
 WHERE tegund = 'Rauðvín';
+
 SELECT * FROM yfirflokkur
 WHERE tegund = 'Hvítvín';
 
 SELECT * FROM alagning;
 
+SELECT * FROM yfirflokkur
+WHERE tegund = 'Viskí'
 
 
 
