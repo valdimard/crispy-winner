@@ -10,7 +10,7 @@ ORDER BY sum(h.solumagn) DESC;
 SELECT h.vorunumer, v.nafn, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
     ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5)*100 AS "Uppsafnað hlutfall",
-    sum(t."Solumagn") OVER () AS "Heildarsala",
+    /*sum(t."Solumagn") OVER () AS "Heildarsala",*/
     CASE
         WHEN (sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER ())*100 <= 80
             THEN 'A'
@@ -39,3 +39,7 @@ SELECT h2.vorunumer as "Vorunumer", sum(h2.solumagn) as "Solumagn"
      GROUP BY h2.vorunumer
     HAVING max(h2.solumagn) > 0
 ORDER BY sum(h2.solumagn) DESC
+
+SELECT nafn FROM vorur
+WHERE yfirflokkur in ('60', '61', '62')
+GROUP BY nafn;
