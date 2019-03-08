@@ -43,3 +43,6 @@ ORDER BY sum(h2.solumagn) DESC
 SELECT nafn FROM vorur
 WHERE yfirflokkur in ('60', '61', '62')
 GROUP BY nafn;
+
+SELECT * FROM alagning
+WHERE afengisgjald = '1';
