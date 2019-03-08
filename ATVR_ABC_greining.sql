@@ -40,9 +40,4 @@ SELECT h2.vorunumer as "Vorunumer", sum(h2.solumagn) as "Solumagn"
     HAVING max(h2.solumagn) > 0
 ORDER BY sum(h2.solumagn) DESC
 
-SELECT nafn FROM vorur
-WHERE yfirflokkur in ('60', '61', '62')
-GROUP BY nafn;
-
-SELECT * FROM alagning
-WHERE afengisgjald = '1';
+SELECT * FROM yfirflokkur;
