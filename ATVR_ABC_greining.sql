@@ -6,7 +6,6 @@ GROUP BY h.vorunumer, h.yfirflokkur, v.nafn, v.millilitrar, v.eining
     HAVING max(h.solumagn) > 0
 ORDER BY sum(h.solumagn) DESC;
 
-
 SELECT h.vorunumer, v.nafn, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
     ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5)*100 AS "Uppsafnað hlutfall",
@@ -38,6 +37,11 @@ SELECT h2.vorunumer as "Vorunumer", sum(h2.solumagn) as "Solumagn"
          AND h2.yfirflokkur in ('60', '61', '62')
      GROUP BY h2.vorunumer
     HAVING max(h2.solumagn) > 0
-ORDER BY sum(h2.solumagn) DESC
+ORDER BY sum(h2.solumagn) DESC;
 
-SELECT * FROM yfirflokkur;
+SELECT nafn FROM vorur
+WHERE yfirflokkur in ('60', '61', '62')
+GROUP BY nafn;
+
+SELECT * FROM alagning
+WHERE afengisgjald = '1';
