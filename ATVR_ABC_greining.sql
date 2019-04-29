@@ -2,8 +2,8 @@ SELECT * FROM yfirflokkur;
 
 SELECT h.vorunumer, v.nafn, v.upprunaland, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
-    ROUND(sum(h.solumagn)/sum(t."Solumagn") OVER (), 5)*100 AS "Hlutfall",
-    ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5)*100 AS "Uppsafnað hlutfall",
+    ROUND(sum(h.solumagn)/sum(t."Solumagn") OVER (), 5) AS "Hlutfall",
+    ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5) AS "Uppsafnað hlutfall",
     /*sum(t."Solumagn") OVER () AS "Heildarsala",*/
     CASE
         WHEN (sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER ())*100 <= 80
