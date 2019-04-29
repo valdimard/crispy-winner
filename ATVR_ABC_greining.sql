@@ -1,11 +1,3 @@
-SELECT h.vorunumer, h.yfirflokkur, v.nafn, v.millilitrar, v.eining, sum(h.solumagn)
-FROM hreyfingar h, vorur v
-    WHERE h.vorunumer = v.vorunumer
-    AND h.yfirflokkur in ('60', '61', '62')
-GROUP BY h.vorunumer, h.yfirflokkur, v.nafn, v.millilitrar, v.eining
-    HAVING max(h.solumagn) > 0
-ORDER BY sum(h.solumagn) DESC;
-
 SELECT h.vorunumer, v.nafn, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
     ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5)*100 AS "Uppsafnað hlutfall",
@@ -31,17 +23,5 @@ ORDER BY sum(h2.solumagn) DESC) t,
     GROUP BY t."Vorunumer", h.vorunumer, v.nafn, t."Solumagn", v.millilitrar, v.eining
 ORDER BY t."Solumagn" DESC;
 
-SELECT h2.vorunumer as "Vorunumer", sum(h2.solumagn) as "Solumagn"
-     FROM hreyfingar h2, vorur v2
-     WHERE h2.vorunumer = v2.vorunumer
-         AND h2.yfirflokkur in ('60', '61', '62')
-     GROUP BY h2.vorunumer
-    HAVING max(h2.solumagn) > 0
-ORDER BY sum(h2.solumagn) DESC;
 
-SELECT nafn FROM vorur
-WHERE yfirflokkur in ('60', '61', '62')
-GROUP BY nafn;
 
-SELECT * FROM alagning
-WHERE afengisgjald = '1';
