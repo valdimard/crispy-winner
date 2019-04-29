@@ -1,6 +1,8 @@
 SELECT * FROM yfirflokkur;
 
-SELECT h.vorunumer, v.nafn, v.upprunaland, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
+
+--ABC Greining
+SELECT h.vorunumer, v.nafn, v.verd, v.upprunaland, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
     ROUND(sum(h.solumagn)/sum(t."Solumagn") OVER (), 5) AS "Hlutfall",
     ROUND(sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) / sum(t."Solumagn") OVER () , 5) AS "Uppsafnað hlutfall",
@@ -23,5 +25,5 @@ ORDER BY sum(h2.solumagn) DESC) t,
     WHERE h.vorunumer = v.vorunumer
     AND h.vorunumer = t."Vorunumer"
     AND h.yfirflokkur in ('01')
-    GROUP BY t."Vorunumer", h.vorunumer, v.nafn, v.upprunaland, t."Solumagn", v.millilitrar, v.eining, v.abc
+    GROUP BY t."Vorunumer", h.vorunumer, v.nafn, v.verd, v.upprunaland, t."Solumagn", v.millilitrar, v.eining, v.abc
 ORDER BY t."Solumagn" DESC;
