@@ -41,6 +41,7 @@ WHERE r.vorunumer = h.vorunumer
 GROUP BY r.vorunumer, r.nafn, r."Sala", r.class, r.abc
 ORDER BY "Veltuhraði" ASC;
 
+
 --Vörur sem eru að velta of hægt
 --CREATE VIEW raudvin_haegur_veltuhradi AS
 SELECT r.vorunumer, r.nafn, r."Heildarsala", r."Meðalbirgðir", r."Veltuhraði", r.class, r.abc
@@ -63,9 +64,11 @@ WHERE v.vorunumer = r.vorunumer
 GROUP BY v.vorunumer, v.nafn, r.class, v.abc
 ORDER BY v.abc DESC;
 
+
 SELECT avg(h."Birgdir/Max Solumagn")
 FROM hamarkssolumagn_medalbirgdir h
 WHERE h.abc = '3';
+
 
 SELECT *
 FROM hamarkssolumagn_medalbirgdir
@@ -74,10 +77,11 @@ AND abc = '3'
 ORDER BY "Birgdir/Max Solumagn" DESC;
 
 
-SELECT h.vorunumer, h.nafn, h."Max Solumagn", h."Meðalbirgðir", CEIL(r."Heildarsala"/2.0) AS "Ideal Birgðir", h."Birgdir/Max Solumagn", r."Veltuhraði", round(r."Heildarsala"/(CEIL(r."Heildarsala"/2.0)), 6) AS "Ideal Veltuhraði", h."Meðalbirgðir"-CEIL(r."Heildarsala"/2.0)
+SELECT h.vorunumer, h.nafn, h."Hámarks Sölumagn", h."Meðalbirgðir", CEIL(r."Heildarsala"/2.0) AS "Ideal Birgðir", h."Birgdir/Hámarks Sölumagn", r."Veltuhraði", round(r."Heildarsala"/(CEIL(r."Heildarsala"/2.0)), 6) AS "Ideal Veltuhraði", h."Meðalbirgðir"-CEIL(r."Heildarsala"/2.0)
 FROM hamarkssolumagn_medalbirgdir h, raudvin_haegur_veltuhradi r
 WHERE h.vorunumer = r.vorunumer
-ORDER BY h."Birgdir/Max Solumagn" DESC
+ORDER BY h."Birgdir/Hámarks Sölumagn" DESC
+
 
 SELECT * FROM raudvin_haegur_veltuhradi
 
@@ -88,9 +92,11 @@ FROM hreyfingar h, raudvin_vitlaust r
     WHERE h.vorunumer = r.vorunumer
 GROUP BY h.dagsetning
 
+
 --Veltuhraði vara sem eru vitlaust flokkaðar
 SELECT sum(dsb."Sölumagn") AS "Heildarsala", avg(dsb."Birgðir") AS "Meðalbirgðir", sum(dsb."Sölumagn")/avg(dsb."Birgðir") AS "Veltuhraði"
 FROM dagsetning_solumagn_birgdir dsb
+
 
 SELECT * FROM raudvin_vitlaust
 
