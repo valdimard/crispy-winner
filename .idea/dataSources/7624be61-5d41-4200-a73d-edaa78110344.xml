@@ -1,34 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="atvr@localhost">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
-    <root id="1"/>
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+    <root id="1">
+      <ServerVersion>10.1</ServerVersion>
+    </root>
     <database id="2" parent="1" name="atvr">
       <ObjectId>24576</ObjectId>
+      <StateNumber>4984</StateNumber>
+      <Owner>solvi</Owner>
+      <IntrospectionStateNumber>9139</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
+      <Relations>sequence|table|24590|24592|1
+</Relations>
     </database>
-    <database id="3" parent="1" name="postgres">
+    <database id="3" parent="1" name="gagnavinnsla">
+      <ObjectId>16798</ObjectId>
+      <StateNumber>4980</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="gavi">
+      <ObjectId>16386</ObjectId>
+      <StateNumber>560</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="5" parent="1" name="hopverkefni">
+      <ObjectId>16559</ObjectId>
+      <StateNumber>4876</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="hopverkefni1">
+      <ObjectId>16797</ObjectId>
+      <StateNumber>4979</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="7" parent="1" name="postgres">
       <ObjectId>12558</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>553</StateNumber>
+      <Owner>solvi</Owner>
     </database>
-    <database id="4" parent="1" name="Valdimar">
+    <database id="8" parent="1" name="solvi">
       <ObjectId>16384</ObjectId>
+      <StateNumber>555</StateNumber>
+      <Owner>solvi</Owner>
     </database>
-    <database id="5" parent="1" name="gavi">
-      <ObjectId>16468</ObjectId>
+    <database id="9" parent="1" name="statusexam">
+      <ObjectId>16522</ObjectId>
+      <StateNumber>4869</StateNumber>
+      <Owner>postgres</Owner>
     </database>
-    <database id="6" parent="1" name="statustest">
-      <ObjectId>16618</ObjectId>
+    <database id="10" parent="1" name="statusexam2">
+      <ObjectId>16464</ObjectId>
+      <StateNumber>4854</StateNumber>
+      <Owner>postgres</Owner>
     </database>
-    <database id="7" parent="1" name="beerproject">
-      <ObjectId>16647</ObjectId>
+    <database id="11" parent="1" name="statusexam3">
+      <ObjectId>16493</ObjectId>
+      <StateNumber>4862</StateNumber>
+      <Owner>postgres</Owner>
     </database>
-    <database id="8" parent="1" name="statusexam">
-      <ObjectId>16724</ObjectId>
-    </database>
-    <database id="9" parent="1" name="lokaverkefni">
-      <ObjectId>17091</ObjectId>
-    </database>
-    <role id="10" parent="1" name="Valdimar">
+    <role id="12" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="postgres">
+      <ObjectId>16385</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="18" parent="1" name="solvi">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
       <Inherit>1</Inherit>
@@ -39,739 +103,418 @@
       <ConnectionLimit>-1</ConnectionLimit>
       <BypassRls>1</BypassRls>
     </role>
-    <role id="11" parent="1" name="pg_monitor">
-      <ObjectId>3373</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <role id="12" parent="1" name="pg_read_all_settings">
-      <ObjectId>3374</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <role id="13" parent="1" name="pg_read_all_stats">
-      <ObjectId>3375</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
-      <ObjectId>4200</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <role id="15" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <role id="16" parent="1" name="postgres">
-      <ObjectId>16385</ObjectId>
-      <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
-      <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
-    </role>
-    <schema id="17" parent="2" name="public">
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>12267</ObjectId>
+      <StateNumber>353</StateNumber>
+      <Owner>solvi</Owner>
+    </schema>
+    <schema id="20" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>350</StateNumber>
+      <Owner>solvi</Owner>
+    </schema>
+    <schema id="21" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <StateNumber>113</StateNumber>
+      <Owner>solvi</Owner>
+    </schema>
+    <schema id="22" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>solvi</Owner>
+    </schema>
+    <schema id="23" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <StateNumber>113</StateNumber>
+      <Owner>solvi</Owner>
+    </schema>
+    <schema id="24" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2019-04-29.18:17:16.689</IntrospectionTimestamp>
-      <IntrospectionStateNumber>59056</IntrospectionStateNumber>
+      <Comment>standard public schema</Comment>
+      <StateNumber>351</StateNumber>
+      <Owner>solvi</Owner>
+      <IntrospectionTimestamp>2019-03-07.15:18:17.422</IntrospectionTimestamp>
+      <IntrospectionStateNumber>9140</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <schema id="18" parent="2" name="pg_catalog">
-      <ObjectId>11</ObjectId>
-    </schema>
-    <schema id="19" parent="2" name="pg_toast">
-      <ObjectId>99</ObjectId>
-    </schema>
-    <schema id="20" parent="2" name="pg_temp_1">
-      <ObjectId>11736</ObjectId>
-    </schema>
-    <schema id="21" parent="2" name="pg_toast_temp_1">
-      <ObjectId>11737</ObjectId>
-    </schema>
-    <schema id="22" parent="2" name="information_schema">
-      <ObjectId>12267</ObjectId>
-    </schema>
-    <sequence id="23" parent="17" name="hreyfingar_id_seq">
-      <ObjectId>24675</ObjectId>
-      <StateNumber>50265</StateNumber>
-      <SequenceIdentity>1..2147483647</SequenceIdentity>
-      <BelongsToColumn>1</BelongsToColumn>
-      <CacheSize>1</CacheSize>
-      <DataType>integer</DataType>
-    </sequence>
-    <table id="24" parent="17" name="alagning">
+    <access-method id="25" parent="2" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="2" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="2" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="2" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="29" parent="2" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="30" parent="2" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="31" parent="2" name="plpgsql">
+      <ObjectId>12544</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>505</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <table id="32" parent="24" name="alagning">
       <ObjectId>24583</ObjectId>
       <StateNumber>50269</StateNumber>
     </table>
-    <table id="25" parent="17" name="hreyfingar">
-      <ObjectId>24595</ObjectId>
-      <StateNumber>50268</StateNumber>
-    </table>
-    <table id="26" parent="17" name="vorur">
+    <table id="33" parent="24" name="vorur">
       <ObjectId>24589</ObjectId>
       <StateNumber>58999</StateNumber>
     </table>
-    <table id="27" parent="17" name="yfirflokkur">
+    <table id="34" parent="24" name="yfirflokkur">
       <ObjectId>24586</ObjectId>
       <StateNumber>50270</StateNumber>
     </table>
-    <view id="28" parent="17" name="abc_bjor">
-      <ObjectId>32772</ObjectId>
-      <StateNumber>59049</StateNumber>
+    <view id="35" parent="24" name="dagsetning_solumagn_birgdir">
+      <ObjectId>32838</ObjectId>
+      <Owner>solvi</Owner>
+      <StateNumber>9138</StateNumber>
+      <SourceTextLength>208</SourceTextLength>
     </view>
-    <view id="29" parent="17" name="hvitvin_allt">
-      <ObjectId>49162</ObjectId>
-      <StateNumber>59054</StateNumber>
+    <view id="36" parent="24" name="hamarkssolumagn_medalbirgdir">
+      <ObjectId>32833</ObjectId>
+      <Owner>solvi</Owner>
+      <StateNumber>9135</StateNumber>
+      <SourceTextLength>490</SourceTextLength>
     </view>
-    <view id="30" parent="17" name="hvitvin_box">
-      <ObjectId>49172</ObjectId>
-      <StateNumber>59056</StateNumber>
+    <view id="37" parent="24" name="raudvin_haegur_veltuhradi">
+      <ObjectId>32829</ObjectId>
+      <Owner>solvi</Owner>
+      <StateNumber>9132</StateNumber>
+      <SourceTextLength>404</SourceTextLength>
     </view>
-    <view id="31" parent="17" name="hvitvin_floskur">
-      <ObjectId>49167</ObjectId>
-      <StateNumber>59055</StateNumber>
+    <view id="38" parent="24" name="raudvin_veltuhradi">
+      <ObjectId>32824</ObjectId>
+      <Owner>solvi</Owner>
+      <StateNumber>9129</StateNumber>
+      <SourceTextLength>419</SourceTextLength>
     </view>
-    <view id="32" parent="17" name="raudvin_allt">
-      <ObjectId>40960</ObjectId>
-      <StateNumber>59053</StateNumber>
+    <view id="39" parent="24" name="raudvin_vitlaust">
+      <ObjectId>32820</ObjectId>
+      <Owner>solvi</Owner>
+      <StateNumber>9126</StateNumber>
+      <SourceTextLength>412</SourceTextLength>
     </view>
-    <view id="33" parent="17" name="raudvin_box">
-      <ObjectId>49157</ObjectId>
-      <StateNumber>59052</StateNumber>
-    </view>
-    <view id="34" parent="17" name="raudvin_floskur">
-      <ObjectId>49152</ObjectId>
-      <StateNumber>59051</StateNumber>
-    </view>
-    <column id="35" parent="24" name="afengisgjald">
+    <column id="40" parent="32" name="afengisgjald">
       <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>50262</StateNumber>
     </column>
-    <column id="36" parent="24" name="alagning">
+    <column id="41" parent="32" name="alagning">
       <Position>2</Position>
-      <DataType>real|0</DataType>
+      <DataType>real|0s</DataType>
       <StateNumber>50239</StateNumber>
     </column>
-    <index id="37" parent="24" name="alagning_pkey">
-      <ObjectId>24663</ObjectId>
-      <ColNames>afengisgjald</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="38" parent="24" name="alagning_pkey">
-      <ObjectId>24664</ObjectId>
-      <ColNames>afengisgjald</ColNames>
-      <UnderlyingIndexName>alagning_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="39" parent="25" name="ar">
+    <column id="42" parent="33" name="vorunumer">
       <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>50260</StateNumber>
-    </column>
-    <column id="40" parent="25" name="fjordungur">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>50234</StateNumber>
-    </column>
-    <column id="41" parent="25" name="manudur">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>50235</StateNumber>
-    </column>
-    <column id="42" parent="25" name="dagsetning">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>48814</StateNumber>
-    </column>
-    <column id="43" parent="25" name="yfirflokkur">
-      <Position>5</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>50253</StateNumber>
-    </column>
-    <column id="44" parent="25" name="vorunumer">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>50254</StateNumber>
-    </column>
-    <column id="45" parent="25" name="birgdir">
-      <Position>7</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>50250</StateNumber>
-    </column>
-    <column id="46" parent="25" name="solumagn">
-      <Position>8</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>50237</StateNumber>
-    </column>
-    <column id="47" parent="25" name="aukning">
-      <Position>9</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>48814</StateNumber>
-    </column>
-    <column id="48" parent="25" name="id">
-      <Position>10</Position>
-      <DataType>integer|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>50265</StateNumber>
-      <DefaultExpression>nextval(&apos;hreyfingar_id_seq&apos;::regclass)</DefaultExpression>
-      <SequenceName>hreyfingar_id_seq</SequenceName>
-    </column>
-    <index id="49" parent="25" name="hreyfingar_pkey">
-      <ObjectId>24685</ObjectId>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="50" parent="25" name="hreyfingar_pkey">
-      <ObjectId>24686</ObjectId>
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>hreyfingar_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="51" parent="25" name="hreyfingar_vorur_fkey">
-      <ObjectId>24687</ObjectId>
-      <ColNames>vorunumer</ColNames>
-      <RefTableId>24589</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>vorur</RefTableName>
-      <RefKeyName>vorur_pkey</RefKeyName>
-      <RefColNames>vorunumer</RefColNames>
-    </foreign-key>
-    <column id="52" parent="26" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>50255</StateNumber>
     </column>
-    <column id="53" parent="26" name="nafn">
+    <column id="43" parent="33" name="nafn">
       <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>48813</StateNumber>
     </column>
-    <column id="54" parent="26" name="yfirflokkur">
+    <column id="44" parent="33" name="yfirflokkur">
       <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>50256</StateNumber>
     </column>
-    <column id="55" parent="26" name="soluflokkur">
+    <column id="45" parent="33" name="soluflokkur">
       <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>50242</StateNumber>
     </column>
-    <column id="56" parent="26" name="abc">
+    <column id="46" parent="33" name="abc">
       <Position>5</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>50258</StateNumber>
     </column>
-    <column id="57" parent="26" name="afengisgjald">
+    <column id="47" parent="33" name="afengisgjald">
       <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>50259</StateNumber>
     </column>
-    <column id="58" parent="26" name="eining">
+    <column id="48" parent="33" name="eining">
       <Position>7</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>48813</StateNumber>
     </column>
-    <column id="59" parent="26" name="millilitrar">
+    <column id="49" parent="33" name="millilitrar">
       <Position>8</Position>
-      <DataType>integer|0</DataType>
+      <DataType>integer|0s</DataType>
       <StateNumber>50244</StateNumber>
     </column>
-    <column id="60" parent="26" name="vinstyrkur">
+    <column id="50" parent="33" name="vinstyrkur">
       <Position>9</Position>
-      <DataType>real|0</DataType>
+      <DataType>real|0s</DataType>
       <StateNumber>50245</StateNumber>
     </column>
-    <column id="61" parent="26" name="verd">
+    <column id="51" parent="33" name="verd">
       <Position>10</Position>
-      <DataType>integer|0</DataType>
+      <DataType>integer|0s</DataType>
       <StateNumber>50264</StateNumber>
     </column>
-    <column id="62" parent="26" name="flokkur">
+    <column id="52" parent="33" name="flokkur">
       <Position>11</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>58999</StateNumber>
     </column>
-    <column id="63" parent="26" name="undirflokkur1">
+    <column id="53" parent="33" name="undirflokkur1">
       <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>58999</StateNumber>
     </column>
-    <column id="64" parent="26" name="undirflokkur2">
+    <column id="54" parent="33" name="undirflokkur2">
       <Position>13</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>58999</StateNumber>
     </column>
-    <column id="65" parent="26" name="undirflokkur3">
+    <column id="55" parent="33" name="undirflokkur3">
       <Position>14</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>58999</StateNumber>
     </column>
-    <column id="66" parent="26" name="upprunaland">
+    <column id="56" parent="33" name="upprunaland">
       <Position>15</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>58999</StateNumber>
     </column>
-    <index id="67" parent="26" name="vorur_pkey">
-      <ObjectId>24625</ObjectId>
-      <ColNames>vorunumer</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="68" parent="26" name="vorur_pkey">
-      <ObjectId>24626</ObjectId>
-      <ColNames>vorunumer</ColNames>
-      <UnderlyingIndexName>vorur_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="69" parent="26" name="vorur_yfirflokkur_fkey">
-      <ObjectId>24697</ObjectId>
-      <ColNames>yfirflokkur</ColNames>
-      <RefTableId>24586</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>yfirflokkur</RefTableName>
-      <RefKeyName>yfirflokkur_pkey</RefKeyName>
-      <RefColNames>yfirflokkur</RefColNames>
-    </foreign-key>
-    <foreign-key id="70" parent="26" name="vorur_afengisgjald_fkey">
-      <ObjectId>24692</ObjectId>
-      <ColNames>afengisgjald</ColNames>
-      <RefTableId>24583</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>alagning</RefTableName>
-      <RefKeyName>alagning_pkey</RefKeyName>
-      <RefColNames>afengisgjald</RefColNames>
-    </foreign-key>
-    <column id="71" parent="27" name="yfirflokkur">
+    <column id="57" parent="34" name="yfirflokkur">
       <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>50263</StateNumber>
     </column>
-    <column id="72" parent="27" name="tegund">
+    <column id="58" parent="34" name="tegund">
       <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
+      <DataType>varchar(250)|0s</DataType>
       <StateNumber>48812</StateNumber>
     </column>
-    <index id="73" parent="27" name="yfirflokkur_pkey">
-      <ObjectId>24669</ObjectId>
-      <ColNames>yfirflokkur</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="74" parent="27" name="yfirflokkur_pkey">
-      <ObjectId>24670</ObjectId>
-      <ColNames>yfirflokkur</ColNames>
-      <UnderlyingIndexName>yfirflokkur_pkey</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <column id="75" parent="28" name="vorunumer">
+    <column id="59" parent="35" name="dagsetning">
       <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59049</StateNumber>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9138</StateNumber>
     </column>
-    <column id="76" parent="28" name="nafn">
+    <column id="60" parent="35" name="Sölumagn">
       <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59049</StateNumber>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>9138</StateNumber>
     </column>
-    <column id="77" parent="28" name="millilitrar">
+    <column id="61" parent="35" name="Birgðir">
       <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59049</StateNumber>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>9138</StateNumber>
     </column>
-    <column id="78" parent="28" name="eining">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="79" parent="28" name="Sala">
-      <Position>5</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="80" parent="28" name="Uppsöfnuð Sala">
-      <Position>6</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="81" parent="28" name="Uppsafnað hlutfall">
-      <Position>7</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="82" parent="28" name="Flokkur">
-      <Position>8</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="83" parent="28" name="abc">
-      <Position>9</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59049</StateNumber>
-    </column>
-    <column id="84" parent="29" name="vorunumer">
+    <column id="62" parent="36" name="vorunumer">
       <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="85" parent="29" name="nafn">
+    <column id="63" parent="36" name="nafn">
       <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="86" parent="29" name="verd">
+    <column id="64" parent="36" name="Hámarks Sölumagn">
       <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>integer|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="87" parent="29" name="upprunaland">
+    <column id="65" parent="36" name="Meðalbirgðir">
       <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="88" parent="29" name="millilitrar">
+    <column id="66" parent="36" name="Birgdir/Hámarks Sölumagn">
       <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="89" parent="29" name="eining">
+    <column id="67" parent="36" name="class">
       <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>text|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="90" parent="29" name="Sala">
+    <column id="68" parent="36" name="abc">
       <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9135</StateNumber>
     </column>
-    <column id="91" parent="29" name="Uppsöfnuð Sala">
+    <column id="69" parent="37" name="vorunumer">
+      <Position>1</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="70" parent="37" name="nafn">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="71" parent="37" name="Heildarsala">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="72" parent="37" name="Meðalbirgðir">
+      <Position>4</Position>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="73" parent="37" name="Veltuhraði">
+      <Position>5</Position>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="74" parent="37" name="class">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="75" parent="37" name="abc">
+      <Position>7</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9132</StateNumber>
+    </column>
+    <column id="76" parent="38" name="vorunumer">
+      <Position>1</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="77" parent="38" name="nafn">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="78" parent="38" name="Heildarsala">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="79" parent="38" name="Meðalbirgðir">
+      <Position>4</Position>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="80" parent="38" name="Veltuhraði">
+      <Position>5</Position>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="81" parent="38" name="class">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="82" parent="38" name="abc">
+      <Position>7</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9129</StateNumber>
+    </column>
+    <column id="83" parent="39" name="vorunumer">
+      <Position>1</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="84" parent="39" name="nafn">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="85" parent="39" name="verd">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="86" parent="39" name="upprunaland">
+      <Position>4</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="87" parent="39" name="millilitrar">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="88" parent="39" name="eining">
+      <Position>6</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="89" parent="39" name="Sala">
+      <Position>7</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>9126</StateNumber>
+    </column>
+    <column id="90" parent="39" name="Uppsöfnuð Sala">
       <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9126</StateNumber>
     </column>
-    <column id="92" parent="29" name="Hlutfall">
+    <column id="91" parent="39" name="Hlutfall">
       <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9126</StateNumber>
     </column>
-    <column id="93" parent="29" name="Uppsafnað hlutfall">
+    <column id="92" parent="39" name="Uppsafnað hlutfall">
       <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>numeric|0s</DataType>
+      <StateNumber>9126</StateNumber>
     </column>
-    <column id="94" parent="29" name="class">
+    <column id="93" parent="39" name="class">
       <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59054</StateNumber>
+      <DataType>text|0s</DataType>
+      <StateNumber>9126</StateNumber>
     </column>
-    <column id="95" parent="29" name="abc">
+    <column id="94" parent="39" name="abc">
       <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59054</StateNumber>
-    </column>
-    <column id="96" parent="30" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="97" parent="30" name="nafn">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="98" parent="30" name="verd">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="99" parent="30" name="upprunaland">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="100" parent="30" name="millilitrar">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="101" parent="30" name="eining">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="102" parent="30" name="Sala">
-      <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="103" parent="30" name="Uppsöfnuð Sala">
-      <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="104" parent="30" name="Hlutfall">
-      <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="105" parent="30" name="Uppsafnað hlutfall">
-      <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="106" parent="30" name="class">
-      <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="107" parent="30" name="abc">
-      <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59056</StateNumber>
-    </column>
-    <column id="108" parent="31" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="109" parent="31" name="nafn">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="110" parent="31" name="verd">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="111" parent="31" name="upprunaland">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="112" parent="31" name="millilitrar">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="113" parent="31" name="eining">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="114" parent="31" name="Sala">
-      <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="115" parent="31" name="Uppsöfnuð Sala">
-      <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="116" parent="31" name="Hlutfall">
-      <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="117" parent="31" name="Uppsafnað hlutfall">
-      <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="118" parent="31" name="class">
-      <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="119" parent="31" name="abc">
-      <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59055</StateNumber>
-    </column>
-    <column id="120" parent="32" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="121" parent="32" name="nafn">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="122" parent="32" name="verd">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="123" parent="32" name="upprunaland">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="124" parent="32" name="millilitrar">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="125" parent="32" name="eining">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="126" parent="32" name="Sala">
-      <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="127" parent="32" name="Uppsöfnuð Sala">
-      <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="128" parent="32" name="Hlutfall">
-      <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="129" parent="32" name="Uppsafnað hlutfall">
-      <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="130" parent="32" name="class">
-      <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="131" parent="32" name="abc">
-      <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59050</StateNumber>
-    </column>
-    <column id="132" parent="33" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="133" parent="33" name="nafn">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="134" parent="33" name="verd">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="135" parent="33" name="upprunaland">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="136" parent="33" name="millilitrar">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="137" parent="33" name="eining">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="138" parent="33" name="Sala">
-      <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="139" parent="33" name="Uppsöfnuð Sala">
-      <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="140" parent="33" name="Hlutfall">
-      <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="141" parent="33" name="Uppsafnað hlutfall">
-      <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="142" parent="33" name="class">
-      <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="143" parent="33" name="abc">
-      <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59052</StateNumber>
-    </column>
-    <column id="144" parent="34" name="vorunumer">
-      <Position>1</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="145" parent="34" name="nafn">
-      <Position>2</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="146" parent="34" name="verd">
-      <Position>3</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="147" parent="34" name="upprunaland">
-      <Position>4</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="148" parent="34" name="millilitrar">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="149" parent="34" name="eining">
-      <Position>6</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="150" parent="34" name="Sala">
-      <Position>7</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="151" parent="34" name="Uppsöfnuð Sala">
-      <Position>8</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="152" parent="34" name="Hlutfall">
-      <Position>9</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="153" parent="34" name="Uppsafnað hlutfall">
-      <Position>10</Position>
-      <DataType>numeric|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="154" parent="34" name="class">
-      <Position>11</Position>
-      <DataType>text|0</DataType>
-      <StateNumber>59051</StateNumber>
-    </column>
-    <column id="155" parent="34" name="abc">
-      <Position>12</Position>
-      <DataType>varchar(250)|0</DataType>
-      <StateNumber>59051</StateNumber>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>9126</StateNumber>
     </column>
   </database-model>
 </dataSource>

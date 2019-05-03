@@ -66,15 +66,15 @@ WHERE v.vorunumer = r.vorunumer
 GROUP BY v.vorunumer, v.nafn, r.class, v.abc
 ORDER BY v.abc DESC;
 
-SELECT avg(h."Birgdir/Max Solumagn")
+SELECT avg(h."Birgdir/Hámarks Sölumagn")
 FROM hamarkssolumagn_medalbirgdir h
 WHERE h.abc = '3';
 
 SELECT *
 FROM hamarkssolumagn_medalbirgdir
-WHERE "Birgdir/Max Solumagn" > 8
+WHERE "Birgdir/Hámarks Sölumagn" > 8
 AND abc = '3'
-ORDER BY "Birgdir/Max Solumagn" DESC;
+ORDER BY "Birgdir/Hámarks Sölumagn" DESC;
 
 
 SELECT h.vorunumer, h.nafn, h."Hámarks Sölumagn", h."Meðalbirgðir", CEIL(r."Heildarsala"/2.0) AS "Ideal Birgðir", h."Birgdir/Hámarks Sölumagn", r."Veltuhraði", round(r."Heildarsala"/(CEIL(r."Heildarsala"/2.0)), 6) AS "Ideal Veltuhraði", h."Meðalbirgðir"-CEIL(r."Heildarsala"/2.0) AS "Mismunur ideal og raun"
