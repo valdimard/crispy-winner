@@ -1,4 +1,5 @@
 --ABC Greining
+--CREATE VIEW raudvin_allt AS
 SELECT h.vorunumer, v.nafn, v.verd, v.upprunaland, v.millilitrar, v.eining, t."Solumagn" AS "Sala",
     sum(t."Solumagn") OVER (ORDER BY t."Solumagn" DESC) AS "Uppsöfnuð Sala",
     ROUND(sum(h.solumagn)/sum(t."Solumagn") OVER (), 5) AS "Hlutfall",
@@ -27,6 +28,7 @@ ORDER BY t."Solumagn" DESC;
 
 
 --Sýna hvaða vörur eru vitlaust flokkaðar
+--CREATE VIEW raudvin_vitlaust AS
 SELECT *
 FROM raudvin_allt r
 WHERE (r.class = 'C' AND r.abc NOT IN ('3'))
@@ -35,6 +37,7 @@ WHERE (r.class = 'C' AND r.abc NOT IN ('3'))
 
 
 --Raða vörum upp eftir veltuhraða
+--CREATE VIEW raudvin_veltuhradi AS
 SELECT r.vorunumer, r.nafn, r."Sala" AS "Heildarsala", round(avg(h.birgdir), 0) AS "Meðalbirgðir", round((r."Sala"/avg(h.birgdir)), 6) AS "Veltuhraði", r.class, r.abc
 FROM raudvin_vitlaust r, hreyfingar h
 WHERE r.vorunumer = h.vorunumer
@@ -74,15 +77,16 @@ AND abc = '3'
 ORDER BY "Birgdir/Max Solumagn" DESC;
 
 
-SELECT h.vorunumer, h.nafn, h."Max Solumagn", h."Meðalbirgðir", CEIL(r."Heildarsala"/2.0) AS "Ideal Birgðir", h."Birgdir/Max Solumagn", r."Veltuhraði", round(r."Heildarsala"/(CEIL(r."Heildarsala"/2.0)), 6) AS "Ideal Veltuhraði", h."Meðalbirgðir"-CEIL(r."Heildarsala"/2.0)
+SELECT h.vorunumer, h.nafn, h."Hámarks Sölumagn", h."Meðalbirgðir", CEIL(r."Heildarsala"/2.0) AS "Ideal Birgðir", h."Birgdir/Hámarks Sölumagn", r."Veltuhraði", round(r."Heildarsala"/(CEIL(r."Heildarsala"/2.0)), 6) AS "Ideal Veltuhraði", h."Meðalbirgðir"-CEIL(r."Heildarsala"/2.0) AS "Mismunur ideal og raun"
 FROM hamarkssolumagn_medalbirgdir h, raudvin_haegur_veltuhradi r
 WHERE h.vorunumer = r.vorunumer
-ORDER BY h."Birgdir/Max Solumagn" DESC
+ORDER BY h."Birgdir/Hámarks Sölumagn" DESC
 
 SELECT * FROM raudvin_haegur_veltuhradi
 
 
 --Heildarsala og heildarbirgðir fyrir alla daga
+--CREATE VIEW dagsetning_solumagn_birgdir AS
 SELECT h.dagsetning, sum(h.solumagn) AS "Sölumagn", sum(h.birgdir) AS "Birgðir"
 FROM hreyfingar h, raudvin_vitlaust r
     WHERE h.vorunumer = r.vorunumer
